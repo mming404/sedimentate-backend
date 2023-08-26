@@ -6,4 +6,10 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - rocketmq</name>
   <url>http://maven.apache.org</url>
+
+  <parent>
+    <groupId>com.topview</groupId>
+    <artifactId>sedimentate-backend</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
 </project>
