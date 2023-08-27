@@ -12,6 +12,7 @@ import org.apache.rocketmq.remoting.exception.RemotingException;
 
 /**
  * @Description: TODO 同步消息
+ * 可靠性要求高  数据量级少  实时响应
  * @Author MiSinG
  * @Date 2023/8/26
  * @Version V1.0

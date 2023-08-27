@@ -22,14 +22,10 @@ public class Consumer {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("SimpleConsumer");
         consumer.setNamesrvAddr("10.21.23.9:9876");
         consumer.subscribe("Simple","*");
-        consumer.setMessageListener(new MessageListenerConcurrently() {
-            @Override
-            public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
-//                list.forEach(n-> System.out.println("消息接收成功:" + n));
-                System.out.println("消息接收成功:");
-                list.forEach(n-> System.out.println(new String(n.getBody(), StandardCharsets.UTF_8)));
-                return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
-            }
+        consumer.setMessageListener((MessageListenerConcurrently) (list, consumeConcurrentlyContext) -> {
+            System.out.println("消息接收成功:");
+            list.forEach(n-> System.out.println(new String(n.getBody(), StandardCharsets.UTF_8)));
+            return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
         });
         consumer.start();
         System.out.println("消费者启动成功");
