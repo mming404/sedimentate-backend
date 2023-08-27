@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Description: TODO
+ * @Description: TODO 推模式消费者
  * @Author MiSinG
  * @Date 2023/8/26
  * @Version V1.0
