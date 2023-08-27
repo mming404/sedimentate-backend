@@ -23,7 +23,7 @@ public class SyncProducer {
         DefaultMQProducer syncProducer = new DefaultMQProducer("SyncProducer");
         syncProducer.setNamesrvAddr("10.21.23.9:9876");
         syncProducer.start();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             Message message = new Message("Simple","tags",(i+" 杨思铭玩SyncProducer").getBytes(StandardCharsets.UTF_8));
             SendResult result = syncProducer.send(message);
         }
