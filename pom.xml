@@ -12,6 +12,8 @@
 
     <modules>
         <module>rocketmq</module>
+        <module>mysql</module>
+        <module>data_structure-algorithm</module>
     </modules>
 
     <properties>
