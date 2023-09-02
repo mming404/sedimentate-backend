@@ -1,6 +1,6 @@
-package stack;
+package ds.stack;
 
-import linkedlist.SinglyLinkNode;
+import ds.linkedlist.SinglyLinkNode;
 
 import java.util.EmptyStackException;
 

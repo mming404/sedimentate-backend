@@ -1,7 +1,6 @@
 package www;
 
-import linkedlist.DoubleLinkedList;
-import linkedlist.SinglyLinkedList;
+import ds.linkedlist.DoubleLinkedList;
 
 /**
  * @Description: TODO

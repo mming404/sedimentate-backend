@@ -1,4 +1,4 @@
-package linkedlist;
+package ds.linkedlist;
 
 /**
  * @Description: TODO  普通单向链表
