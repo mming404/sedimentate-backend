@@ -7,8 +7,8 @@ package linkedlist;
  * @Version V1.0
  **/
 public class SinglyLinkNode {
-    int data;
-    SinglyLinkNode next;
+    public int data;
+    public SinglyLinkNode next;
 
     public SinglyLinkNode(int data, SinglyLinkNode next) {
         this.data = data;

@@ -1,6 +1,5 @@
 package linkedlist;
 
-import org.yaml.snakeyaml.events.Event;
 
 /**
  * @Description: TODO
