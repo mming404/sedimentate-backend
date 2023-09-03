@@ -1,5 +1,3 @@
-package www;
-
 import ds.linkedlist.DoubleLinkedList;
 
 /**
