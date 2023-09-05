@@ -1,6 +1,7 @@
 package algorithm.sort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * @Description: TODO
@@ -20,25 +21,30 @@ public class QuickSort {
     }
 
     public int partition(int[] arr, int low, int high) {
-        int temp = arr[low];
+        int pivot = arr[low];
         while (low < high) {
-            while (low < high && arr[high] >= temp) {
+            while (low < high && arr[high] >= pivot) {
                 high--;
             }
             arr[low] = arr[high];
-            while (low < high && arr[low] <= temp) {
+            while (low < high && arr[low] <= pivot) {
                 low++;
             }
             arr[high] = arr[low];
         }
-        arr[low] = temp;
+        arr[low] = pivot;
         return low;
     }
 
     public static void main(String[] args) {
+        Random random = new Random();
+        int[] ints = new int[50];
+        for (int i = 0; i < 50; i++) {
+            ints[i] = random.nextInt();
+        }
         QuickSort quickSort = new QuickSort();
-        int[] arr = {64, 25, 12, 22, 11, 23, 4, 16, 34};
-        quickSort.quickSort(arr, 0, arr.length - 1);
-        Arrays.stream(arr).forEach(System.out::println);
+//        int[] arr = {64, 25, 12, 22, 11, 23, 4, 16, 34};
+        quickSort.quickSort(ints, 0, ints.length - 1);
+        Arrays.stream(ints).forEach(System.out::println);
     }
 }
