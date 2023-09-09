@@ -37,14 +37,14 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        Random random = new Random();
-        int[] ints = new int[50];
-        for (int i = 0; i < 50; i++) {
-            ints[i] = random.nextInt();
-        }
+//        Random random = new Random();
+//        int[] ints = new int[50];
+//        for (int i = 0; i < 50; i++) {
+//            ints[i] = random.nextInt();
+//        }
         QuickSort quickSort = new QuickSort();
-//        int[] arr = {64, 25, 12, 22, 11, 23, 4, 16, 34};
-        quickSort.quickSort(ints, 0, ints.length - 1);
-        Arrays.stream(ints).forEach(System.out::println);
+        int[] arr = {64, 25, 12, 22, 11, 23, 4, 16, 34};
+        quickSort.quickSort(arr, 0, arr.length - 1);
+        Arrays.stream(arr).forEach(System.out::println);
     }
 }
