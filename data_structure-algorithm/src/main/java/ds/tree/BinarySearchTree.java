@@ -14,6 +14,9 @@ public class BinarySearchTree {
         public TreeNode(int data) {
             this.data = data;
         }
+
+        public TreeNode() {
+        }
     }
 
 
@@ -48,6 +51,25 @@ public class BinarySearchTree {
         //插入后返回当前节点
         return root;
 
+    }
+
+    /**
+     * 删除节点
+     * @param
+     */
+    private int DeleteNode(TreeNode root ,int key){
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        BinarySearchTree tree = new BinarySearchTree();
+        TreeNode treeNode = tree.insert(null, 4);
+        tree.insert(treeNode, 7);
+        tree.insert(treeNode, 3);
+        tree.insert(treeNode, 4);
+        tree.insert(treeNode, 8);
+
+        System.out.println(tree.searchTree(treeNode, 8).data);
     }
 
 
