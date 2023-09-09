@@ -1,4 +1,5 @@
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
@@ -8,12 +9,17 @@ import java.util.concurrent.FutureTask;
  * @Version V1.0
  **/
 public class ThreadStudy {
-    public void test(){
-        FutureTask<String> task = new FutureTask<String>(new Callable<String>() {
-            @Override
-            public String call() throws Exception {
-                return "hhhh";
-            }
-        });
+
+
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        new ThreadStudy().test();
+    }
+    public void test() throws ExecutionException, InterruptedException {
+        FutureTask<String> task = new FutureTask<>(() -> "hhhh");
+
+        task.run();
+
+        System.out.println(task.get());
+
     }
 }
