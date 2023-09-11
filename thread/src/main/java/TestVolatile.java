@@ -1,4 +1,5 @@
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 /**
  * @Description: TODO
@@ -41,7 +42,10 @@ public class TestVolatile {
         System.out.println(a);
     }
 
+//    private static final ThreadLocal<Long> TIME = new ThreadLocal<>();
+
     public static void main(String[] args) throws InterruptedException {
+
         new TestVolatile().test();
     }
 }
