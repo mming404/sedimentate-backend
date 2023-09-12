@@ -14,6 +14,5 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class CHMTest {
     public void test(){
         ConcurrentHashMap<String, String> concurrentHashMap = new ConcurrentHashMap<>();
-
     }
 }
