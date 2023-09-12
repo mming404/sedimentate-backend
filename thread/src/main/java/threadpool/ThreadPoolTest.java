@@ -13,6 +13,7 @@ import java.util.concurrent.*;
 public class ThreadPoolTest {
 
     public void tssdasd() throws ExecutionException, InterruptedException {
+        //创建线程池的正常操作
         ThreadPoolExecutor executor = new ThreadPoolExecutor(5,
                 10,
                 60,
@@ -34,10 +35,13 @@ public class ThreadPoolTest {
     }
 
     public void testExecutor(){
+        //通过Executors创建线程池是不建议的
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         ExecutorService executorService1 = Executors.newSingleThreadExecutor();
         ExecutorService executorService2 = Executors.newCachedThreadPool();
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(5);
+        FutureTask<String> task = new FutureTask<>(() -> "1");
+        Future<?> submit = executorService.submit(task);
         scheduledExecutorService.schedule(new Runnable() {
             @Override
             public void run() {
