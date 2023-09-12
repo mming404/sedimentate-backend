@@ -1,5 +1,7 @@
 package threadpool;
 
+import com.alibaba.druid.sql.ast.statement.SQLPrivilegeItem;
+
 import java.util.concurrent.*;
 
 /**
@@ -31,7 +33,22 @@ public class ThreadPoolTest {
         executor.shutdown();
     }
 
+    public void testExecutor(){
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        ExecutorService executorService1 = Executors.newSingleThreadExecutor();
+        ExecutorService executorService2 = Executors.newCachedThreadPool();
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(5);
+        scheduledExecutorService.schedule(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("sss");
+            }
+        },10,TimeUnit.SECONDS);
+        scheduledExecutorService.shutdown();
+
+    }
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        new ThreadPoolTest().tssdasd();
+        new ThreadPoolTest().testExecutor();
     }
 }
