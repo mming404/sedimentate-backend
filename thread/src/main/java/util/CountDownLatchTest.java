@@ -1,7 +1,6 @@
-package lock;
+package util;
 
 import java.util.concurrent.*;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Description: TODO
@@ -9,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Date 2023/9/14
  * @Version V1.0
  **/
-public class ReentrantLockTest {
+public class CountDownLatchTest {
     private static final int N = 100;
 
     private static final CountDownLatch lock  = new CountDownLatch(N);
