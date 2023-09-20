@@ -3,7 +3,7 @@ package algorithm.sort;
 import java.util.Arrays;
 
 /**
- * @Description: TODO
+ * @Description: TODO 简单插入排序
  * @Author MiSinG
  * @Date 2023/9/3
  * @Version V1.0
