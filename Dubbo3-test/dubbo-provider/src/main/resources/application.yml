@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dubbo-provider
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: fastjson2
+  registry:
+    address: nacos://10.21.23.9:8848?username=nacos&password=nacos
