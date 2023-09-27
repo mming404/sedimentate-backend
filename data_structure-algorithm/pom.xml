@@ -10,4 +10,16 @@
     <artifactId>data_structure-algorithm</artifactId>
     <name>Archetype - data_structure-algorithm</name>
     <url>http://maven.apache.org</url>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>19</source>
+                    <target>19</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
