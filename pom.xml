@@ -15,6 +15,7 @@
         <module>mysql</module>
         <module>data_structure-algorithm</module>
         <module>thread</module>
+        <module>Design-pattern</module>
     </modules>
 
     <properties>
