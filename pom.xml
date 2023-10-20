@@ -16,6 +16,7 @@
         <module>data_structure-algorithm</module>
         <module>thread</module>
         <module>Design-pattern</module>
+        <module>canal</module>
     </modules>
 
     <properties>

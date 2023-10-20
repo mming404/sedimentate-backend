@@ -7,7 +7,7 @@ package creational;
  * @Version V1.0
  **/
 public class Singleton {
-    ;
+
     private final static class SingletonIn{
         private static Singleton instance = new Singleton();
     }

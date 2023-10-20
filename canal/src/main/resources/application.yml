@@ -1,0 +1,72 @@
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.topview.recruit: debug
+
+spring:
+  datasource:
+    druid:
+      username: root
+      password: root
+      url: jdbc:mysql://10.21.23.149:3306/recruit?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        initial-size: 10
+        max-active: 60
+        min-idle: 5
+        #设置防火墙 监控
+        filters: wall,mergeStat
+        filter:
+          #sql监控设置
+          stat:
+            #是否记录慢查询
+            log-slow-sql: true
+            #慢查询的sql时间  毫秒
+            slow-sql-millis: 5000
+        #监控信息页面 用户密码
+        stat-view-servlet:
+          login-username: diversion-system
+          login-password: diversion-system-backend
+          #默认开启
+          enabled: true
+          allow:
+          deny:
+        test-while-idle: true
+        test-on-borrow: true
+
+  redis:
+    host: 10.21.23.9
+    port: 6379
+    password: '040711'
+    database: 0
+    timeout: 5000
+
+    #restful风格使用手动开启
+    mvc:
+      hiddenmethod:
+        filter:
+          enabled: true
+
+    servlet:
+      multipart:
+        max-file-size: 2MB
+
+  mybatis:
+    #指定mapper映射文件位置
+    mapper-locations: classpath:mapper/*.xml
+    configuration:
+      #配置开启驼峰映射
+      map-underscore-to-camel-case: true
+
+
+    #开启加密
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true

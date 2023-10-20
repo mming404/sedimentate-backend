@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  **/
 public class SleepSort {
     private void sleepSort(int[] nums) {
-        // 线程数组。
+            // 线程数组。工厂
         Thread[] threads = new Thread[nums.length];
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
